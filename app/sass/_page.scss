@@ -1,0 +1,99 @@
+.Page {
+  height: 100vh;
+  padding: 175px 0 0;
+  @media screen and (max-height: 900px) {
+    height: 120vh;
+  }
+  &--eventos {
+    background: transparent url('./../images/bg-eventos.png') center 0 no-repeat;
+    background-size: cover;
+  }
+  &--nosotros {
+    background: transparent url('./../images/bg-nosotros.jpg') center 0 no-repeat;
+    background-size: cover;
+  }
+  &--contactanos {
+    background: transparent url('./../images/bg-contactanos.png') center 0 no-repeat;
+    background-size: cover;
+  }
+}
+.Page-title {
+  font-weight: 600;
+}
+.Page-figure {
+  margin-bottom: 25px;
+}
+.Page-blog {
+  @include flex-wrap(wrap);
+  @include justify-content(space-between);
+}
+.Page-blog-figure {
+  border: 1px solid transparent;
+  display: inline-block;
+  position: relative;
+  @include transition(all 0.2s ease);
+  &:hover {
+    border-color: $yellow;
+    .Page-blog-figure-readMore {
+      @include opacity(1);
+      @include scale(1);
+    }
+  }
+}
+.Page-blog-figure-readMore {
+  background-color: rgba($text-color, .8);
+  bottom: 0;
+  @include align-items(center);
+  @include display-flex();
+  @include justify-content(center);
+  font-weight: 600;
+  @include opacity(0);
+  position: absolute;
+  @include scale(0);
+  text-align: center;
+  top: 0;
+  width: 100%;
+  a {
+    color: $yellow;
+    display: block;
+    text-decoration: none;
+    &::before {
+      background: transparent url('./../images/eye.png') center 0 no-repeat;
+      content: "";
+      display: block;
+      height: 53px;
+      margin-bottom: 5px;
+      width: 56px;
+    }
+  }
+}
+.Page-blog-title {
+  color: white;
+  font-weight: 300;
+}
+.Page-marginTop {
+  margin-top: 30px;
+}
+.Page-video {
+  border: 1px solid $yellow;
+  padding: 15px;
+}
+.Page-textDecorate {
+  &::before, &::after {
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    display: block;
+    height: 60px;
+    width: 100%;
+  }
+  &::before {
+    background-image: url('./../images/lazo-top.png');
+    margin-bottom: 20px;
+  }
+  &::after {
+    background-image: url('./../images/lazo-bottom.png');
+    margin-top: 20px;
+  }
+}

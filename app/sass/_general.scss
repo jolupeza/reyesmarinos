@@ -1,0 +1,29 @@
+body {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+a {
+  color: white;
+  text-decoration: underline;
+  @include transition(all 0.2s ease-in);
+  &:hover, &:focus {
+    color: $yellow;
+  }
+}
+p {
+  font-weight: 300;
+}
+.text-yellow {
+  color: $yellow;
+}
+.text-blue {
+  color: $text-color;
+}
+.text-font-across {
+  font-family: "acrosstheroadregular";
+}
+.Title {
+  font-size: 6.875em;
+}

@@ -1,0 +1,24 @@
+.Carousel {
+  &--eventos {
+    border: 1px solid $yellow;
+    padding: 15px;
+    .carousel-control {
+      background-color: rgba(19, 78, 127, 0.8);
+      bottom: auto;
+      font-size: 3em;
+      line-height: 1.1em;
+      @include opacity(1);
+      @include text-shadow(none);
+      text-decoration: none;
+      top: 40%;
+      width: auto;
+      &.left, &.right {
+        background-image: none;
+        background-repeat: no-repeat;
+      }
+      &:hover {
+        background-color: rgba($yellow, 0.8);
+      }
+    }
+  }
+}

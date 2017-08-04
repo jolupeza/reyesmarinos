@@ -1,0 +1,31 @@
+.Social {
+  border: 1px solid white;
+  margin-top: 30px;
+  padding: 15px 30px;
+  h3 {
+    color: white;
+    font-size: 1.125em;
+    margin: 0 0 15px 0;
+    strong {
+      font-weight: 600;
+    }
+  }
+}
+.Social-list {
+  @include display-flex();
+  @include justify-content(space-around);
+  margin-bottom: 0;
+  padding-left: 0;
+  width: 100%;
+  li {
+    font-size: 3em;
+    list-style: none;
+    margin-right: 15px;
+    &:last-child {
+      margin-right: 0;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+}
