@@ -135,11 +135,17 @@ $celeste: #0073aa;
     &--center {
         @include justify-content(center);
     }
+    &--wrap {
+        @include flex-wrap(wrap);
+    }
 }
 
 .GroupForm-wrapperImage {
     @include flex(0 1 25%);
     margin-bottom: 15px;
+    &--33 {
+        @include flex(0 1 32%);
+    }
 }
 
 .GroupForm-wrapperImage {

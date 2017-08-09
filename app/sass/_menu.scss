@@ -47,7 +47,7 @@
       padding-right: 15px;
       text-decoration: none;
     }
-    &.active, &.current-menu-item {
+    &.active, &.current-menu-item, &.current-menu-parent {
       a {
         color: $yellow;
         text-decoration: underline;

@@ -138,7 +138,7 @@ p {
   padding-right: 15px;
   text-decoration: none;
 }
-.MainMenu li.active a, .MainMenu li.current-menu-item a {
+.MainMenu li.active a, .MainMenu li.current-menu-item a, .MainMenu li.current-menu-parent a {
   color: #b68e0d;
   text-decoration: underline;
 }
@@ -252,8 +252,13 @@ p {
 .Page-blog {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
+}
+
+.Page-blog-item {
+  margin-right: 25px;
+}
+.Page-blog-item:nth-child(4n+4) {
+  margin-right: 0;
 }
 
 .Page-blog-figure {
@@ -563,4 +568,18 @@ p {
 
 .Maps-map {
   height: 100%;
+}
+
+.Events {
+  display: -webkit-flex;
+  display: flex;
+}
+
+.Events-video {
+  margin-right: 15px;
+  width: 700px;
+}
+
+.Events-content {
+  margin-left: 15px;
 }

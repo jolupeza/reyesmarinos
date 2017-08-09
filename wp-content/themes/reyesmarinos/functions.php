@@ -25,10 +25,10 @@ if ( function_exists('add_theme_support') ) {
 
   add_theme_support('post-formats', ['gallery', 'video']);
 
-  // add_image_size('solution-thumb', 186, 186, [
-  //   'x_crop_position' => 'center',
-  //   'y_crop_position' => 'center'
-  // ]);
+  add_image_size('event-thumb', 290, 160, [
+    'x_crop_position' => 'center',
+    'y_crop_position' => 'center'
+  ]);
 }
 
 /****************************************/

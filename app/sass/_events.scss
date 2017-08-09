@@ -1,0 +1,10 @@
+.Events {
+  @include display-flex();
+}
+.Events-video {
+  margin-right: 15px;
+  width: 700px;
+}
+.Events-content {
+  margin-left: 15px;
+}

@@ -249,6 +249,74 @@ class ReyesMarinos_Manager_Admin
                 break;
         }
     }
+    
+    /**
+     * Registers the meta box that will be used to display all of the post meta data
+     * associated with the current post.
+     */
+    public function cd_mb_post_add()
+    {
+        add_meta_box(
+            'mb-post-id',
+            'Campos personalizados',
+            array($this, 'render_mb_post'),
+            'post',
+            'normal',
+            'core'
+        );
+    }
+
+    public function cd_mb_post_save($post_id)
+    {
+        // Bail if we're doing an auto save
+        if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+            return;
+        }
+
+        // if our nonce isn't there, or we can't verify it, bail
+        if (!isset($_POST['meta_box_nonce']) || !wp_verify_nonce($_POST['meta_box_nonce'], 'post_meta_box_nonce')) {
+            return;
+        }
+        
+        // Video
+        if (isset($_POST['mb_video']) && !empty($_POST['mb_video'])) {
+            update_post_meta($post_id, 'mb_video', esc_attr($_POST['mb_video']));
+        } else {
+            delete_post_meta($post_id, 'mb_video');
+        }
+
+//        Slides
+        if (isset($_POST['mb_slides'])) {
+            $images = $_POST['mb_slides'];
+
+            $save = false;
+            $newArrSlides = array();
+            $i = 0;
+
+            foreach ($images as $img) {
+                if (!empty($img)) {
+                    $save = true;
+                    $newArrSlides[] = $img;
+                }
+
+                ++$i;
+            }
+
+            if ($save) {
+                update_post_meta($post_id, 'mb_slides', $newArrSlides);
+            } else {
+                delete_post_meta($post_id, 'mb_slides');
+            }
+        }
+    }
+
+    /**
+     * Requires the file that is used to display the user interface of the post meta box.
+     */
+    public function render_mb_post()
+    {
+        require_once plugin_dir_path(__FILE__).'partials/reyesmarinos-mb-post.php';
+    }
         
     /**
      * Add custom content type slides.

@@ -25,7 +25,12 @@
 }
 .Page-blog {
   @include flex-wrap(wrap);
-  @include justify-content(space-between);
+}
+.Page-blog-item {
+  margin-right: 25px;
+  &:nth-child(4n+4) {
+    margin-right: 0;
+  }
 }
 .Page-blog-figure {
   border: 1px solid transparent;
