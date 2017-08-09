@@ -317,6 +317,67 @@ class ReyesMarinos_Manager_Admin
     {
         require_once plugin_dir_path(__FILE__).'partials/reyesmarinos-mb-post.php';
     }
+    
+    /**
+     * Registers the meta box that will be used to display all of the post meta data
+     * associated with the current page.
+     */
+    public function cd_mb_pages_add()
+    {
+        add_meta_box(
+            'mb-pages-id',
+            'Campos personalizados',
+            array($this, 'render_mb_pages'),
+            'page',
+            'normal',
+            'core'
+        );
+    }
+
+    public function cd_mb_pages_save($post_id)
+    {
+        // Bail if we're doing an auto save
+        if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+            return;
+        }
+
+        // if our nonce isn't there, or we can't verify it, bail
+        if (!isset($_POST['meta_box_nonce']) || !wp_verify_nonce($_POST['meta_box_nonce'], 'pages_meta_box_nonce')) {
+            return;
+        }
+
+//        Slides
+        if (isset($_POST['mb_slides'])) {
+            $images = $_POST['mb_slides'];
+
+            $save = false;
+            $newArrSlides = array();
+            $i = 0;
+
+            foreach ($images as $img) {
+                if (!empty($img)) {
+                    $save = true;
+                    $newArrSlides[] = $img;
+                }
+
+                ++$i;
+            }
+
+            if ($save) {
+                update_post_meta($post_id, 'mb_slides', $newArrSlides);
+            } else {
+                delete_post_meta($post_id, 'mb_slides');
+            }
+        }
+    }
+
+    /**
+     * Requires the file that is used to display the user interface of the post meta box.
+     */
+    public function render_mb_pages()
+    {
+        require_once plugin_dir_path(__FILE__).'partials/reyesmarinos-mb-pages.php';
+    }
         
     /**
      * Add custom content type slides.

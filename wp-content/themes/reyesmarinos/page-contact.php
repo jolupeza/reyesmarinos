@@ -7,10 +7,20 @@
 <?php get_header(); ?>
 
 <?php $options = get_option('reyesmarinos_custom_settings'); ?>
+<?php
+  $lat = isset($options['lat']) ? $options['lat'] : '';
+  $long = isset($options['long']) ? $options['long'] : '';
+?>
 
 <?php if (have_posts()) : ?>
   <?php while (have_posts()) : ?>
     <?php the_post(); ?>
+
+    <?php
+      $values = get_post_custom(get_the_id());
+      $slides = isset($values['mb_slides']) ? $values['mb_slides'][0] : '';
+    ?>
+
     <section class="Page Page--contactanos">
       <div class="container">
         <div class="row">
@@ -80,6 +90,44 @@
             </form>
           </div>
         </div>
+
+        <section class="Maps">
+          <article class="Maps-carousel">
+            <?php if (!empty($slides)) : ?>
+              <?php $slides = unserialize($slides); ?>
+              <?php if (count($slides)) : ?>
+                <?php $i = 0; ?>
+                <section id="carousel-maps" class="carousel slide Carousel Carousel--contact" data-ride="carousel">
+                  <div class="carousel-inner" role="listbox">
+                    <?php foreach ($slides as $slide) : ?>
+                      <div class="item<?php echo ($i === 0) ? ' active' : ''; ?>">
+                        <picture>
+                          <!-- <source class="img-responsive center-block" media="(max-width: 767px) and (orientation: portrait)" srcset="./images/slide-home-responsive.jpg" alt="" /> -->
+                          <img class="img-responsive center-block" src="<?php echo $slide; ?>" alt="<?php echo get_the_title(); ?>" />
+                        </picture>
+                      </div>
+                      <?php $i++; ?>
+                    <?php endforeach; ?>
+                  </div>
+
+                  <?php if (count($slides) > 1) : ?>
+                    <a class="left carousel-control" href="#carousel-maps" role="button" data-slide="prev">
+                      <i class="icon-keyboard_arrow_left"></i>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-maps" role="button" data-slide="next">
+                      <i class="icon-keyboard_arrow_right"></i>
+                    </a>
+                  <?php endif; ?>
+                </section>
+              <?php endif; ?>
+            <?php endif; ?>
+          </article>
+          <article class="Maps-wrapper">
+            <?php if (!empty($lat) && !empty($long)) : ?>
+              <figure class="Maps-map" id="map" data-lat="<?php echo $lat; ?>" data-long="<?php echo $long; ?>"></figure>
+            <?php endif; ?>
+          </article>
+        </section>
       </div>
     </section>
   <?php endwhile; ?>

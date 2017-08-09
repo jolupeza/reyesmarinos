@@ -6,6 +6,19 @@ var j = jQuery.noConflict();
   var $win = j(window),
       $doc = j(document);
 
+  $win.on('resize', function() {
+    if (map) {
+      var $map = j('#map');
+
+      if ($map.length) {
+        var lat = $map.data('lat'),
+            long = $map.data('long');
+
+        map.setCenter({lat: lat, lng: long});
+      }
+    }
+  });
+
   $doc.on('ready', function () {
     j('#js-frm-contact').formValidation({
       locale: 'es_ES',

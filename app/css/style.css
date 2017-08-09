@@ -220,25 +220,20 @@ p {
 }
 
 .Page {
-  height: 100vh;
+  min-height: 100vh;
   padding: 175px 0 0;
 }
-@media screen and (max-height: 900px) {
-  .Page {
-    height: 120vh;
-  }
-}
 .Page--eventos {
-  background: transparent url("./../images/bg-eventos.png") center 0 no-repeat;
+  background: transparent url("./../images/bg-eventos.png") center 0 repeat-y;
   background-size: cover;
 }
 .Page--nosotros {
-  background: transparent url("./../images/bg-nosotros.jpg") center 0 no-repeat;
+  background: transparent url("./../images/bg-nosotros.jpg") center 0 repeat-y;
   background-size: cover;
 }
 .Page--contactanos {
-  background: transparent url("./../images/bg-contactanos.png") center 0 no-repeat;
-  background-size: cover;
+  background: transparent url("./../images/bg-contactanos.png") center 0 repeat-y;
+  background-size: contain;
 }
 
 .Page-title {
@@ -582,4 +577,29 @@ p {
 
 .Events-content {
   margin-left: 15px;
+}
+
+.Marker {
+  padding-top: 15px;
+}
+
+.Marker-list {
+  padding-left: 0;
+}
+.Marker-list li {
+  color: #172330;
+  font-size: 14px;
+  font-weight: 300;
+  list-style: none;
+  margin-bottom: 10px;
+}
+.Marker-list li strong {
+  font-weight: 600;
+}
+
+.Marker-title {
+  color: #172330;
+  font-size: 1.75em;
+  font-weight: 600;
+  margin-top: 0;
 }

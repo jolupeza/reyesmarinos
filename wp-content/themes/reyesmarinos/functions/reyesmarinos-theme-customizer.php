@@ -92,33 +92,6 @@ function reyesmarinos_customize_register($wp_customize) {
     'type' => 'text'
   ]);
 
-  /*
-  // Phone
-  $wp_customize->add_setting('reyesmarinos_custom_settings[phone]', [
-    'default' => '',
-    'type' => 'option'
-  ]);
-
-  $wp_customize->add_control('reyesmarinos_custom_settings[phone]', [
-    'label' => __('Teléfono', THEMEDOMAIN),
-    'section' => 'reyesmarinos_info',
-    'settings' => 'reyesmarinos_custom_settings[phone]',
-    'type' => 'text'
-  ]);
-
-  // Movil
-  $wp_customize->add_setting('reyesmarinos_custom_settings[movil]', [
-    'default' => '',
-    'type' => 'option'
-  ]);
-
-  $wp_customize->add_control('reyesmarinos_custom_settings[movil]', [
-    'label' => __('Celular', THEMEDOMAIN),
-    'section' => 'reyesmarinos_info',
-    'settings' => 'reyesmarinos_custom_settings[movil]',
-    'type' => 'text'
-  ]);
-
   // Address
   $wp_customize->add_setting('reyesmarinos_custom_settings[address]', [
     'default' => '',
@@ -157,5 +130,4 @@ function reyesmarinos_customize_register($wp_customize) {
     'settings' => 'reyesmarinos_custom_settings[long]',
     'type' => 'text'
   ]);
-  */
 }

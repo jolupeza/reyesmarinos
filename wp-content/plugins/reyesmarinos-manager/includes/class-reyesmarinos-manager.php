@@ -110,6 +110,9 @@ class ReyesMarinos_Manager
         
         $this->loader->add_action('add_meta_boxes', $admin, 'cd_mb_post_add');
         $this->loader->add_action('save_post', $admin, 'cd_mb_post_save' );
+        
+        $this->loader->add_action('add_meta_boxes', $admin, 'cd_mb_pages_add');
+        $this->loader->add_action('save_post', $admin, 'cd_mb_pages_save' );
     }
 
     /**
