@@ -64,7 +64,7 @@ p {
   border: 1px solid #b68e0d;
   padding: 15px;
 }
-.Carousel--eventos .carousel-control {
+.Carousel--eventos .carousel-control, .Carousel--contact .carousel-control {
   background-color: rgba(19, 78, 127, 0.8);
   bottom: auto;
   font-size: 3em;
@@ -76,11 +76,11 @@ p {
   top: 40%;
   width: auto;
 }
-.Carousel--eventos .carousel-control.left, .Carousel--eventos .carousel-control.right {
+.Carousel--eventos .carousel-control.left, .Carousel--eventos .carousel-control.right, .Carousel--contact .carousel-control.left, .Carousel--contact .carousel-control.right {
   background-image: none;
   background-repeat: no-repeat;
 }
-.Carousel--eventos .carousel-control:hover {
+.Carousel--eventos .carousel-control:hover, .Carousel--contact .carousel-control:hover {
   background-color: rgba(182, 142, 13, 0.8);
 }
 
@@ -347,8 +347,9 @@ p {
 .Button {
   display: inline-block;
   font-size: 1.25em;
-  padding: 8px 20px;
+  padding: 5px 20px;
   text-decoration: none;
+  vertical-align: top;
 }
 .Button--border {
   border-style: solid;
@@ -375,6 +376,33 @@ p {
 }
 .Button--submit:hover {
   background-image: url("./../images/button-submit-hover.png");
+}
+
+.Nav {
+  display: inline-block;
+  vertical-align: top;
+}
+.Nav:hover .Nav-left {
+  background-position: 0 -42px;
+}
+.Nav:hover .Nav-right {
+  background-position: -75px -42px;
+}
+
+.Nav-left, .Nav-right {
+  background-image: url("./../images/sprites.png");
+  background-repeat: no-repeat;
+  display: block;
+  height: 42px;
+  width: 75px;
+}
+
+.Nav-left {
+  background-position: 0 0;
+}
+
+.Nav-right {
+  background-position: -75px 0;
 }
 
 .Box {
@@ -460,4 +488,79 @@ p {
   font-size: 1.5em;
   margin: 0 15px;
   vertical-align: middle;
+}
+
+.Pagination {
+  display: -webkit-flex;
+  display: flex;
+  margin: 50px 0 0;
+  width: 100%;
+}
+.Pagination ul.page-numbers {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-content: center;
+  align-content: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin-bottom: 0;
+  padding-left: 0;
+  width: 100%;
+}
+.Pagination ul.page-numbers li {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  list-style: none;
+  margin-right: 20px;
+}
+.Pagination ul.page-numbers li:last-child {
+  margin-right: 0;
+}
+.Pagination ul.page-numbers li a {
+  text-decoration: none;
+  -moz-transition: none;
+  -o-transition: none;
+  -webkit-transition: none;
+  transition: none;
+}
+.Pagination ul.page-numbers li a, .Pagination ul.page-numbers li span {
+  display: block;
+}
+.Pagination ul.page-numbers li a.prev, .Pagination ul.page-numbers li a.next {
+  background-image: url("./../images/sprites.png");
+  background-repeat: no-repeat;
+  height: 42px;
+  width: 75px;
+}
+.Pagination ul.page-numbers li a.prev {
+  background-position: 0 0;
+}
+.Pagination ul.page-numbers li a.prev:hover {
+  background-position: 0 -42px;
+}
+.Pagination ul.page-numbers li a.next {
+  background-position: -75px 0;
+}
+.Pagination ul.page-numbers li a.next:hover {
+  background-position: -75px -42px;
+}
+.Pagination ul.page-numbers li .current {
+  color: #b68e0d;
+}
+
+.Maps {
+  display: -webkit-flex;
+  display: flex;
+  margin: 25px 0;
+}
+
+.Maps-carousel, .Maps-wrapper {
+  -webkit-flex: 0 1 50%;
+  flex: 0 1 50%;
+}
+
+.Maps-map {
+  height: 100%;
 }

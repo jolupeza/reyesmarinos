@@ -1,0 +1,10 @@
+.Maps {
+  @include display-flex();
+  margin: 25px 0;
+}
+.Maps-carousel, .Maps-wrapper {
+  @include flex(0 1 50%);
+}
+.Maps-map {
+  height: 100%;
+}

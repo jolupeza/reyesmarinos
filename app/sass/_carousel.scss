@@ -2,6 +2,8 @@
   &--eventos {
     border: 1px solid $yellow;
     padding: 15px;
+  }
+  &--eventos, &--contact {
     .carousel-control {
       background-color: rgba(19, 78, 127, 0.8);
       bottom: auto;
