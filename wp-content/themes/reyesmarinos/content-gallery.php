@@ -46,6 +46,11 @@
 </div>
 
 <?php
+  $category = get_the_category();
+  $categoryName = $category[0]->name;
+?>
+
+<?php
   if (file_exists(TEMPLATEPATH . '/partials/navigation-events.php')) {
     include TEMPLATEPATH . '/partials/navigation-events.php';
   }
