@@ -17,10 +17,20 @@
     <!-- endinject -->
     <!-- endbuild -->
   </head>
-  <body>
+  <body class="category">
     <header class="Header">
       <div class="container">
-        <nav class="Header-menu">
+        <div class="row hidden-md hidden-lg">
+          <div class="col-xs-6">
+            <h1 class="Header-logo">
+              <a href="index.html">
+                <img src="images/logo.png" alt="Reyes Marinos" class="img-responsive">
+              </a>
+            </h1>
+          </div>
+          <div class="col-xs-6">&nbsp;</div>
+        </div>
+        <nav class="Header-menu hidden-xs hidden-sm">
           <h1 class="Header-logo">
             <a href="index.html">
               <img src="images/logo.png" alt="Reyes Marinos" class="img-responsive center-block">
@@ -34,52 +44,77 @@
             <li><a href="contactanos.html">Contáctanos</a></li>
           </ul>
         </nav>
+        <aside class="Header-toggle visible-xs-block visible-sm-block js-toggle-slidebar">
+          <i class="Icon Icon--toggle"></i>
+        </aside>
       </div>
     </header>
 
-    <section class="Page Page--eventos">
-      <div class="container">
-        <section class="Box Page-blog">
-          <article class="Box-item Page-blog-item">
-            <figure class="Page-blog-figure">
-              <img src="images/post-thumb01.jpg" alt="Post 01" class="img-responsive center-block">
-              <aside class="Page-blog-figure-readMore text-uppercase"><a href="evento-single-foto.html">Ver</a></aside>
-            </figure>
-            <h2 class="Page-blog-title h5">¡Bienvenidos a nuestra web!</h2>
-          </article>
-          <article class="Box-item Page-blog-item">
-            <figure class="Page-blog-figure">
-              <img src="images/post-thumb01.jpg" alt="Post 01" class="img-responsive center-block">
-              <aside class="Page-blog-figure-readMore text-uppercase"><a href="evento-single-foto.html">Ver</a></aside>
-            </figure>
-            <h2 class="Page-blog-title h5">¡Bienvenidos a nuestra web!</h2>
-          </article>
-          <article class="Box-item Page-blog-item">
-            <figure class="Page-blog-figure">
-              <img src="images/post-thumb01.jpg" alt="Post 01" class="img-responsive center-block">
-              <aside class="Page-blog-figure-readMore text-uppercase"><a href="evento-single-foto.html">Ver</a></aside>
-            </figure>
-            <h2 class="Page-blog-title h5">¡Bienvenidos a nuestra web!</h2>
-          </article>
-          <article class="Box-item Page-blog-item">
-            <figure class="Page-blog-figure">
-              <img src="images/post-thumb01.jpg" alt="Post 01" class="img-responsive center-block">
-              <aside class="Page-blog-figure-readMore text-uppercase"><a href="evento-single-foto.html">Ver</a></aside>
-            </figure>
-            <h2 class="Page-blog-title h5">¡Bienvenidos a nuestra web!</h2>
-          </article>
-        </section>
-
-        <nav class="Pagination text-center">
-          <ul class="page-numbers">
-            <li><a href="" class="prev page-numbers">&nbsp;</a></li>
-            <li><a href="" class="page-numbers">1</a></li>
-            <li><a href="" class="page-numbers">2</a></li>
-            <li><span class="page-numbers current">3</span></li>
-            <li><a href="" class="next page-numbers">&nbsp;</a></li>
+    <section class="Slidebar">
+      <aside class="Slidebar-close js-toggle-slidebar">
+        <i class="Icon Icon--close"></i>
+      </aside>
+      <article class="Slidebar-content">
+        <nav class="Header-menu">
+          <ul class="MainMenu">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="contactanos.html">Contáctanos</a></li>
           </ul>
         </nav>
-      </div>
+      </article>
+    </section>
+
+    <section class="Page">
+      <figure class="Page-background">
+        <img src="images/bg-eventos.png" class="img-responsive center-block" />
+        <section class="Page-bgContent">
+          <div class="container">
+            <section class="Box Page-blog">
+              <article class="Box-item Page-blog-item">
+                <figure class="Page-blog-figure">
+                  <img src="images/post-thumb01.jpg" alt="Post 01" class="img-responsive center-block">
+                  <aside class="Page-blog-figure-readMore text-uppercase"><a href="evento-single-foto.html">Ver</a></aside>
+                </figure>
+                <h2 class="Page-blog-title h5">¡Bienvenidos a nuestra web!</h2>
+              </article>
+              <article class="Box-item Page-blog-item">
+                <figure class="Page-blog-figure">
+                  <img src="images/post-thumb01.jpg" alt="Post 01" class="img-responsive center-block">
+                  <aside class="Page-blog-figure-readMore text-uppercase"><a href="evento-single-foto.html">Ver</a></aside>
+                </figure>
+                <h2 class="Page-blog-title h5">¡Bienvenidos a nuestra web!</h2>
+              </article>
+              <article class="Box-item Page-blog-item">
+                <figure class="Page-blog-figure">
+                  <img src="images/post-thumb01.jpg" alt="Post 01" class="img-responsive center-block">
+                  <aside class="Page-blog-figure-readMore text-uppercase"><a href="evento-single-foto.html">Ver</a></aside>
+                </figure>
+                <h2 class="Page-blog-title h5">¡Bienvenidos a nuestra web!</h2>
+              </article>
+              <article class="Box-item Page-blog-item">
+                <figure class="Page-blog-figure">
+                  <img src="images/post-thumb01.jpg" alt="Post 01" class="img-responsive center-block">
+                  <aside class="Page-blog-figure-readMore text-uppercase"><a href="evento-single-foto.html">Ver</a></aside>
+                </figure>
+                <h2 class="Page-blog-title h5">¡Bienvenidos a nuestra web!</h2>
+              </article>
+            </section>
+
+            <nav class="Pagination text-center">
+              <ul class="page-numbers">
+                <li><a href="" class="prev page-numbers">&nbsp;</a></li>
+                <li><a href="" class="page-numbers">1</a></li>
+                <li><a href="" class="page-numbers">2</a></li>
+                <li><span class="page-numbers current">3</span></li>
+                <li><a href="" class="next page-numbers">&nbsp;</a></li>
+              </ul>
+            </nav>
+          </div>
+        </section>
+      </figure>
     </section>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

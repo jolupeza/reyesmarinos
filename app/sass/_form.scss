@@ -1,4 +1,7 @@
 .Form {
+  @media screen and (max-width: 991px) {
+    margin-top: 25px;
+  }
   .form-group {
     margin-bottom: 20px;
   }
@@ -12,10 +15,19 @@
       color: #787878;
       font-size: 1em;
     }
+    @media screen and (max-width: 991px) {
+      padding: 10px 12px;
+    }
   }
   textarea {
     &.form-control {
       height: 150px;
+    }
+  }
+  .Form-button {
+    text-align: right;
+    @media screen and (max-width: 991px) {
+      text-align: center;
     }
   }
 }

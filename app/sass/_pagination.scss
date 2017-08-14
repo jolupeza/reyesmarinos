@@ -1,7 +1,10 @@
 .Pagination {
   @include display-flex();
-  margin: 50px 0 0;
+  margin: 50px 0 20px;
   width: 100%;
+  @media screen and (max-width: 991px) {
+    margin-bottom: 50px;
+  }
   ul.page-numbers {
     @include display-flex();
     @include align-content(center);

@@ -3,4 +3,10 @@
 }
 .Box-item {
   @include flex(0 1 23%);
+  @media screen and (max-width: 991px) {
+    @include flex(0 1 45%);
+  }
+  @media screen and (max-width: 400px) {
+    @include flex(0 1 100%);
+  }
 }

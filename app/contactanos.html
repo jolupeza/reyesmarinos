@@ -17,10 +17,20 @@
     <!-- endinject -->
     <!-- endbuild -->
   </head>
-  <body>
+  <body class="page-template-page-contact">
     <header class="Header">
       <div class="container">
-        <nav class="Header-menu">
+        <div class="row hidden-md hidden-lg">
+          <div class="col-xs-6">
+            <h1 class="Header-logo">
+              <a href="index.html">
+                <img src="images/logo.png" alt="Reyes Marinos" class="img-responsive">
+              </a>
+            </h1>
+          </div>
+          <div class="col-xs-6">&nbsp;</div>
+        </div>
+        <nav class="Header-menu hidden-xs hidden-sm">
           <h1 class="Header-logo">
             <a href="index.html">
               <img src="images/logo.png" alt="Reyes Marinos" class="img-responsive center-block">
@@ -34,8 +44,28 @@
             <li class="active"><a href="contactanos.html">Contáctanos</a></li>
           </ul>
         </nav>
+        <aside class="Header-toggle visible-xs-block visible-sm-block js-toggle-slidebar">
+          <i class="Icon Icon--toggle"></i>
+        </aside>
       </div>
     </header>
+
+    <section class="Slidebar">
+      <aside class="Slidebar-close js-toggle-slidebar">
+        <i class="Icon Icon--close"></i>
+      </aside>
+      <article class="Slidebar-content">
+        <nav class="Header-menu">
+          <ul class="MainMenu">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="contactanos.html">Contáctanos</a></li>
+          </ul>
+        </nav>
+      </article>
+    </section>
 
     <section class="Page Page--contactanos">
       <div class="container">
@@ -45,16 +75,6 @@
             <div class="text-blue">
               <p>De tí, de lo que haces, de tu plato favorito, de los lugares que más te gustan, de lo que esperas de un restaurante o si te gustaría ser parte de nosotros.</p>
             </div>
-
-            <section class="Social">
-              <h3><span><strong class="text-uppercase">Síguenos </strong>en</span></h3>
-
-              <ul class="Social-list">
-                <li><a href=""><i class="icon-facebook"></i></a></li>
-                <li><a href=""><i class="icon-twitter"></i></a></li>
-                <li><a href=""><i class="icon-instagram"></i></a></li>
-              </ul>
-            </section>
           </div>
           <div class="col-md-6">
             <form action="" class="Form">
@@ -71,11 +91,26 @@
                 <textarea class="form-control" name="contact_message" id="contact_message" placeholder="Escribe tu mensaje"></textarea>
               </div>
 
-              <p class="text-right">
+              <p class="Form-button">
                 <button type="submit" class="Button Button--submit">enviar</button>
               </p>
             </form>
           </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <section class="Social">
+              <h3><span><strong class="text-uppercase">Síguenos </strong>en</span></h3>
+
+              <ul class="Social-list">
+                <li><a href=""><i class="icon-facebook"></i></a></li>
+                <li><a href=""><i class="icon-twitter"></i></a></li>
+                <li><a href=""><i class="icon-instagram"></i></a></li>
+              </ul>
+            </section>
+          </div>
+          <div class="col-md-6">&nbsp;</div>
         </div>
 
         <section class="Maps">

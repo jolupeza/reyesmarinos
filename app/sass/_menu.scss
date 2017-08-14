@@ -44,7 +44,7 @@
       color: $text-color;
       @include display-flex();
       height: 49px;
-      padding-right: 15px;
+      padding-right: 30px;
       text-decoration: none;
     }
     &.active, &.current-menu-item, &.current-menu-parent {

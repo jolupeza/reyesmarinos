@@ -1,10 +1,21 @@
 .Events {
   @include display-flex();
+  @media screen and (max-width: 991px) {
+    @include flex-wrap(wrap);
+  }
 }
 .Events-video {
   margin-right: 15px;
   width: 700px;
+  @media screen and (max-width: 991px) {
+    margin-bottom: 50px;
+  }
 }
 .Events-content {
   margin-left: 15px;
+}
+.Events-video, .Events-content {
+  @media screen and (max-width: 991px) {
+    @include flex(0 1 100%);
+  }
 }

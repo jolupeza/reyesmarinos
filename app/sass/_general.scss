@@ -3,6 +3,16 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   font-weight: 300;
+  &.category, &.single {
+    @media screen and (max-width: 991px) {
+      background: transparent url('./../images/bg-body.jpg') 0 0 repeat;
+    }
+  }
+  &.page-template-page-contact {
+    @media screen and (max-width: 991px) {
+      background-color: $skyBlue;
+    }
+  }
 }
 a {
   color: white;

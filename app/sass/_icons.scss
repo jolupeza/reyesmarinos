@@ -1,0 +1,14 @@
+.Icon {
+  background-image: url('./../images/sprites.png');
+  background-repeat: no-repeat;
+  display: block;
+  height: 40px;
+  width: 40px;
+  &--toggle {
+    background-position: -150px 0;
+    cursor: pointer;
+  }
+  &--close {
+    background-position: -150px -40px;
+  }
+}

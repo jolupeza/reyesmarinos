@@ -2,6 +2,9 @@
   &--eventos {
     border: 1px solid $yellow;
     padding: 15px;
+    @media screen and (max-width: 991px) {
+      margin-bottom: 50px;
+    }
   }
   &--eventos, &--contact {
     .carousel-control {

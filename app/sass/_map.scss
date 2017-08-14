@@ -1,9 +1,15 @@
 .Maps {
   @include display-flex();
   margin: 25px 0;
+  @media screen and (max-width: 767px) {
+    @include flex-wrap(wrap);
+  }
 }
 .Maps-carousel, .Maps-wrapper {
   @include flex(0 1 50%);
+  @media screen and (max-width: 767px) {
+    @include flex(0 1 100%);
+  }
 }
 .Maps-map {
   height: 100%;

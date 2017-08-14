@@ -20,6 +20,41 @@
   <body>
     <header class="Header">
       <div class="container">
+        <div class="row hidden-md hidden-lg">
+          <div class="col-xs-6">
+            <h1 class="Header-logo">
+              <a href="index.html">
+                <img src="images/logo.png" alt="Reyes Marinos" class="img-responsive">
+              </a>
+            </h1>
+          </div>
+          <div class="col-xs-6">&nbsp;</div>
+        </div>
+        <nav class="Header-menu hidden-xs hidden-sm">
+          <h1 class="Header-logo">
+            <a href="index.html">
+              <img src="images/logo.png" alt="Reyes Marinos" class="img-responsive center-block">
+            </a>
+          </h1>
+          <ul class="MainMenu">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="contactanos.html">Contáctanos</a></li>
+          </ul>
+        </nav>
+        <aside class="Header-toggle visible-xs-block visible-sm-block js-toggle-slidebar">
+          <i class="Icon Icon--toggle"></i>
+        </aside>
+      </div>
+    </header>
+
+    <section class="Slidebar">
+      <aside class="Slidebar-close js-toggle-slidebar">
+        <i class="Icon Icon--close"></i>
+      </aside>
+      <article class="Slidebar-content">
         <nav class="Header-menu">
           <ul class="MainMenu">
             <li class="active"><a href="index.html">Home</a></li>
@@ -29,8 +64,8 @@
             <li><a href="contactanos.html">Contáctanos</a></li>
           </ul>
         </nav>
-      </div>
-    </header>
+      </article>
+    </section>
 
     <section id="carousel-home" class="carousel slide Carousel Carousel--home" data-ride="carousel">
       <!-- <ol class="carousel-indicators">
@@ -41,7 +76,7 @@
       <div class="carousel-inner" role="listbox">
         <div class="item active">
           <picture>
-            <!-- <source class="img-responsive center-block" media="(max-width: 767px) and (orientation: portrait)" srcset="./images/slide-home-responsive.jpg" alt="" /> -->
+            <source class="img-responsive center-block" media="(max-width: 991px) and (orientation: portrait)" srcset="./images/slide-01-responsive.jpg" alt="" />
             <img class="img-responsive center-block" src="./images/slide-01.jpg" alt="Slide Home 01" />
           </picture>
           <!-- <div class="carousel-caption carousel-caption--left">

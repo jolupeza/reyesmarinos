@@ -4,6 +4,9 @@
   top: 0;
   width: 100%;
   z-index: 99;
+  @media screen and (max-width: 991px) {
+    padding: 15px 0;
+  }
 }
 .Header-menu {
   @include align-items(center);
@@ -13,4 +16,25 @@
 }
 .Header-logo {
   margin: 0 25px 0 0;
+  @media screen and (max-width: 991px) {
+    margin-right: 0;
+    img {
+      width: 86px;
+    }
+  }
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+    margin-left: 40px;
+    img {
+      width: 60px;
+    }
+  }
+}
+.Header-toggle {
+  padding: 15px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+    right: 40px;
+  }
 }
