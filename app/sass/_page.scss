@@ -106,3 +106,16 @@
     margin-top: 20px;
   }
 }
+.Page-background {
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: 9;
+}
+.Page-bgContent {
+  left: 0;
+  position: absolute;
+  top: 200px;
+  width: 100%;
+  z-index: 99;
+}

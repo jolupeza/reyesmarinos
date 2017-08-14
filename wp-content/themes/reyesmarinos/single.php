@@ -1,20 +1,26 @@
 <?php get_header(); ?>
 
-<section class="Page Page--eventos">
-  <div class="container">
+<section class="Page">
+  <figure class="Page-background">
+    <img src="<?php echo IMAGES; ?>/bg-eventos.png" class="img-responsive center-block" />
 
-    <?php if (have_posts()) : ?>
+    <section class="Page-bgContent">
+      <div class="container">
 
-      <?php while (have_posts()) : ?>
-        <?php the_post(); ?>
+        <?php if (have_posts()) : ?>
 
-        <?php get_template_part('content', get_post_format()); ?>
+          <?php while (have_posts()) : ?>
+            <?php the_post(); ?>
 
-      <?php endwhile; ?>
+            <?php get_template_part('content', get_post_format()); ?>
 
-    <?php endif; ?>
+          <?php endwhile; ?>
 
-  </div>
+        <?php endif; ?>
+
+      </div>
+    </section>
+  </figure>
 </section>
 
 <?php get_footer(); ?>

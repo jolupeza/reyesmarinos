@@ -369,6 +369,13 @@ class ReyesMarinos_Manager_Admin
                 delete_post_meta($post_id, 'mb_slides');
             }
         }
+        
+        // Image Backround
+        if (isset($_POST['mb_background']) && !empty($_POST['mb_background'])) {
+            update_post_meta($post_id, 'mb_background', esc_attr($_POST['mb_background']));
+        } else {
+            delete_post_meta($post_id, 'mb_background');
+        }
     }
 
     /**
