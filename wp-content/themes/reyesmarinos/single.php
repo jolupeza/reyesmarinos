@@ -1,26 +1,22 @@
 <?php get_header(); ?>
 
-<section class="Page">
-  <figure class="Page-background">
-    <img src="<?php echo IMAGES; ?>/bg-eventos.png" class="img-responsive center-block" />
+<?php if (have_posts()) : ?>
+  <?php while (have_posts()) : ?>
+    <?php $category = get_the_category(); ?>
+    <section class="Page">
+      <figure class="Page-background">
+        <img src="<?php echo IMAGES; ?>/bg-<?php echo $category[0]->slug; ?>.png" class="img-responsive center-block" />
 
-    <section class="Page-bgContent">
-      <div class="container">
-
-        <?php if (have_posts()) : ?>
-
-          <?php while (have_posts()) : ?>
+        <section class="Page-bgContent">
+          <div class="container">
             <?php the_post(); ?>
 
             <?php get_template_part('content', get_post_format()); ?>
-
-          <?php endwhile; ?>
-
-        <?php endif; ?>
-
-      </div>
+          </div>
+        </section>
+      </figure>
     </section>
-  </figure>
-</section>
+  <?php endwhile; ?>
+<?php endif; ?>
 
 <?php get_footer(); ?>

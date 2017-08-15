@@ -1,9 +1,10 @@
 <?php get_header(); ?>
 
 <?php if (have_posts()) : ?>
+  <?php $category = get_category(get_query_var('cat')); ?>
   <section class="Page">
     <figure class="Page-background">
-      <img src="<?php echo IMAGES; ?>/bg-eventos.png" class="img-responsive center-block" />
+      <img src="<?php echo IMAGES; ?>/bg-<?php echo $category->slug; ?>.png" class="img-responsive center-block" />
       <section class="Page-bgContent">
         <div class="container">
           <section class="Box Page-blog">
