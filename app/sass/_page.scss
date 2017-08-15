@@ -211,7 +211,15 @@
       @include align-items(flex-start);
     }
   }
+  .col-xs-4, .col-xs-8 {
+    @media screen and (max-width: 767px) and (orientation: portrait) {
+      width: 100%;
+    }
+  }
   @media screen and (max-width: 991px) {
     padding-top: 130px;
+  }
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+    padding-top: 100px;
   }
 }

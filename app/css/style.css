@@ -4,6 +4,7 @@ html, body {
 }
 
 body {
+  background-color: #172330;
   color: white;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -11,7 +12,6 @@ body {
 }
 body.category, body.single {
   background-color: #172330;
-  background-image: url("./../images/bg-eventos.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -24,7 +24,6 @@ body.category, body.single {
 }
 body.page-template-page-contact {
   background-color: #a6bfcd;
-  background-image: url("./../images/bg-contactanos.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -566,9 +565,19 @@ p {
     align-items: flex-start;
   }
 }
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  .Page-bgContent .col-xs-4, .Page-bgContent .col-xs-8 {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 991px) {
   .Page-bgContent {
     padding-top: 130px;
+  }
+}
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .Page-bgContent {
+    padding-top: 100px;
   }
 }
 

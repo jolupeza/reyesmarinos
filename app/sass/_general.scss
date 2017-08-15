@@ -2,13 +2,14 @@ html, body {
   height: 100%;
 }
 body {
+  background-color: $text-color;
   color: white;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   font-weight: 300;
   &.category, &.single {
     background-color: $text-color;
-    background-image: url('./../images/bg-eventos.png');
+    // background-image: url('./../images/bg-eventos.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -19,7 +20,7 @@ body {
   }
   &.page-template-page-contact {
     background-color: $skyBlue;
-    background-image: url('./../images/bg-contactanos.png');
+    // background-image: url('./../images/bg-contactanos.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
