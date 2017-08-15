@@ -13,6 +13,7 @@
         
         $slides = isset($values['mb_slides']) ? $values['mb_slides'][0] : '';
         $background = isset( $values['mb_background'] ) ? esc_attr($values['mb_background'][0]) : '';
+        $responsive = isset( $values['mb_responsive'] ) ? esc_attr($values['mb_responsive'][0]) : '';
         
         wp_nonce_field('pages_meta_box_nonce', 'meta_box_nonce');
         
@@ -98,6 +99,30 @@
 
                 <p class="media-info">
                     <input class="hd-src" type="hidden" name="mb_background" value="<?php echo $background; ?>" />
+                </p><!-- .media-info -->
+            </div><!-- end container-upload-file -->
+        </section>
+    </fieldset>
+    
+    <fieldset class="GroupForm">
+        <legend class="GroupForm-legend">Imagen de Fondo Responsive</legend>
+
+        <section class="GroupForm-flex GroupForm-flex--center">
+            <div class="container-upload-file GroupForm-wrapperImage">
+                <p class="btn-add-file">
+                    <a title="Agregar imagen" href="javascript:;" class="set-file button button-primary">Añadir Imagen</a>
+                </p>
+
+                <div class="hidden media-container">
+                    <img src="<?php echo $responsive; ?>" alt="<?php //echo get_post_meta( $post->ID, 'slider-1-alt', true );  ?>" title="<?php //echo get_post_meta( $post->ID, 'slider-1-title', true );  ?>" />
+                </div><!-- .media-container -->
+
+                <p class="hidden">
+                    <a title="Quitar imagen" href="javascript:;" class="remove-file button button-secondary">Quitar Imagen</a>
+                </p>
+
+                <p class="media-info">
+                    <input class="hd-src" type="hidden" name="mb_responsive" value="<?php echo $responsive; ?>" />
                 </p><!-- .media-info -->
             </div><!-- end container-upload-file -->
         </section>

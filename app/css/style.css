@@ -472,7 +472,7 @@ p {
 }
 @media screen and (max-width: 991px) {
   .Page-textDecorate::before, .Page-textDecorate::after {
-    height: 77px;
+    height: 45px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -486,11 +486,6 @@ p {
 }
 @media screen and (max-width: 991px) {
   .Page-textDecorate::before {
-    margin-bottom: 40px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .Page-textDecorate::before {
     margin-bottom: 5px;
   }
 }
@@ -500,16 +495,16 @@ p {
 }
 @media screen and (max-width: 991px) {
   .Page-textDecorate::after {
-    margin-top: 40px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .Page-textDecorate::after {
     margin-top: 5px;
   }
 }
 .Page-textDecorate p {
   text-align: justify;
+}
+@media screen and (max-width: 991px) and (orientation: landscape) {
+  .Page-textDecorate p {
+    font-size: 0.875em;
+  }
 }
 @media screen and (max-width: 767px) {
   .Page-textDecorate p {
@@ -560,6 +555,18 @@ p {
   align-items: center;
 }
 @media screen and (max-width: 1300px) {
+  .Page-bgContent--center {
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+  }
+}
+@media screen and (max-width: 991px) and (orientation: portrait) {
+  .Page-bgContent--center {
+    -webkit-align-items: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 767px) and (orientation: portrait) {
   .Page-bgContent--center {
     -webkit-align-items: flex-start;
     align-items: flex-start;

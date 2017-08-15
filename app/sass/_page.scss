@@ -137,7 +137,7 @@
     height: 60px;
     width: 100%;
     @media screen and (max-width: 991px) {
-      height: 77px;
+      height: 45px;
     }
     @media screen and (max-width: 767px) {
       height: 35px;
@@ -147,9 +147,6 @@
     background-image: url('./../images/lazo-top.png');
     margin-bottom: 20px;
     @media screen and (max-width: 991px) {
-      margin-bottom: 40px;
-    }
-    @media screen and (max-width: 767px) {
       margin-bottom: 5px;
     }
   }
@@ -157,14 +154,14 @@
     background-image: url('./../images/lazo-bottom.png');
     margin-top: 20px;
     @media screen and (max-width: 991px) {
-      margin-top: 40px;
-    }
-    @media screen and (max-width: 767px) {
       margin-top: 5px;
     }
   }
   p {
     text-align: justify;
+    @media screen and (max-width: 991px) and (orientation: landscape) {
+      font-size: 0.875em;
+    }
     @media screen and (max-width: 767px) {
       font-size: 0.875em;
     }
@@ -208,6 +205,12 @@
   &--center {
     @include align-items(center);
     @media screen and (max-width: 1300px) {
+      @include align-items(flex-start);
+    }
+    @media screen and (max-width: 991px) and (orientation: portrait) {
+      @include align-items(center);
+    }
+    @media screen and (max-width: 767px) and (orientation: portrait) {
       @include align-items(flex-start);
     }
   }
