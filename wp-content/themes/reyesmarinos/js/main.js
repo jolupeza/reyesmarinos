@@ -17,6 +17,20 @@ var j = jQuery.noConflict();
         map.setCenter({lat: lat, lng: long});
       }
     }
+
+    if (player) {
+      if (j(window).width() >= 768) {
+        player.setSize('640', '360');
+      }
+
+      if (j(window).width() < 768) {
+        player.setSize('426', '240');
+      }
+
+      if (j(window).width() < 450) {
+        player.setSize('320', '240');
+      }
+    }
   });
 
   $doc.on('ready', function () {
@@ -64,6 +78,17 @@ var j = jQuery.noConflict();
       }, 'json').fail(function(){
         alert('No se pudo realizar la operación solicitada. Por favor vuelva a intentarlo.');
       });
+    });
+
+    j('.js-toggle-slidebar .Icon').on('click', function(ev) {
+      ev.preventDefault();
+      var slidebar = j('.Slidebar');
+
+      if (slidebar.hasClass('active')) {
+        slidebar.removeClass('active');
+      } else {
+        slidebar.addClass('active');
+      }
     });
   });
 })(jQuery);

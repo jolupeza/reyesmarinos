@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Reyes Marinos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <header class="Header">
+      <div class="container">
+        <div class="row hidden-md hidden-lg">
+          <div class="col-xs-6">
+            <h1 class="Header-logo">
+              <a href="index.html">
+                <img src="images/logo.png" alt="Reyes Marinos" class="img-responsive">
+              </a>
+            </h1>
+          </div>
+          <div class="col-xs-6">&nbsp;</div>
+        </div>
+        <nav class="Header-menu hidden-xs hidden-sm">
+          <h1 class="Header-logo">
+            <a href="index.html">
+              <img src="images/logo.png" alt="Reyes Marinos" class="img-responsive center-block">
+            </a>
+          </h1>
+          <ul class="MainMenu">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="contactanos.html">Contáctanos</a></li>
+          </ul>
+        </nav>
+        <aside class="Header-toggle visible-xs-block visible-sm-block js-toggle-slidebar">
+          <i class="Icon Icon--toggle"></i>
+        </aside>
+      </div>
+    </header>
+
+    <section class="Slidebar">
+      <aside class="Slidebar-close js-toggle-slidebar">
+        <i class="Icon Icon--close"></i>
+      </aside>
+      <article class="Slidebar-content">
+        <nav class="Header-menu">
+          <ul class="MainMenu">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="contactanos.html">Contáctanos</a></li>
+          </ul>
+        </nav>
+      </article>
+    </section>
+
+    <section id="carousel-home" class="carousel slide Carousel Carousel--home" data-ride="carousel">
+      <!-- <ol class="carousel-indicators">
+        <li data-target="#carousel-home" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-home" data-slide-to="1"></li>
+      </ol> -->
+
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <picture>
+            <source class="img-responsive center-block" media="(max-width: 991px) and (orientation: portrait)" srcset="./images/slide-01-responsive.jpg" alt="" />
+            <img class="img-responsive center-block" src="./images/slide-01.jpg" alt="Slide Home 01" />
+          </picture>
+          <!-- <div class="carousel-caption carousel-caption--left">
+            <h2 class="text-uppercase">Vigila</h2>
+            <p>expertos en soluciones de seguridad electrónica para empresas.</p>
+            <div class="carousel-buttons text-uppercase">
+              <a class="Button Button--white Button--medium Button--transparent Button--border Button--borderWhite" href="">Solicita aquí</a>
+            </div>
+          </div> -->
+        </div>
+      </div>
+
+     <!--  <a class="left carousel-control" href="#carousel-home" role="button" data-slide="prev">
+        <i class="icon-keyboard_arrow_left"></i>
+      </a>
+      <a class="right carousel-control" href="#carousel-home" role="button" data-slide="next">
+        <i class="icon-keyboard_arrow_right"></i>
+      </a> -->
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <script src="js/vendor.min.js"></script>
+    
+  </body>
+</html>

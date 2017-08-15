@@ -35,6 +35,14 @@
         background-color: transparent;
         color: white;
         padding-right: 0;
+        &:hover, &:focus {
+          color: $yellow;
+        }
+      }
+      &.active, &.current-menu-item, &.current-menu-parent {
+        a {
+          color: $yellow;
+        }
       }
       &:first-child {
         a {

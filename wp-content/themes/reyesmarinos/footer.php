@@ -12,7 +12,7 @@
 
     <?php wp_footer(); ?>
 
-    <?php if (!empty($lat) && !empty($long)) : ?>
+    <?php if (!empty($lat) && !empty($long) && is_page('contactanos')) : ?>
       <script>
         var lat = <?php echo $lat; ?>,
             lon = <?php echo $long; ?>;

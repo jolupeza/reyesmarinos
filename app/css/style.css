@@ -1,19 +1,34 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600");
+html, body {
+  height: 100%;
+}
+
 body {
   color: white;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   font-weight: 300;
 }
+body.category, body.single {
+  background-color: #172330;
+  background-image: url("./../images/bg-eventos.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
 @media screen and (max-width: 991px) {
   body.category, body.single {
     background: transparent url("./../images/bg-body.jpg") 0 0 repeat;
   }
 }
-@media screen and (max-width: 991px) {
-  body.page-template-page-contact {
-    background-color: #a6bfcd;
-  }
+body.page-template-page-contact {
+  background-color: #a6bfcd;
+  background-image: url("./../images/bg-contactanos.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 a {
@@ -186,6 +201,10 @@ p {
   padding-right: 30px;
   text-decoration: none;
 }
+.MainMenu li a:hover, .MainMenu li a:focus {
+  color: #b68e0d;
+  text-decoration: underline;
+}
 .MainMenu li.active a, .MainMenu li.current-menu-item a, .MainMenu li.current-menu-parent a {
   color: #b68e0d;
   text-decoration: underline;
@@ -268,8 +287,6 @@ p {
 }
 
 .Page {
-  background-color: #172330;
-  min-height: 100vh;
   padding: 190px 0 0;
 }
 .Page--eventos {
@@ -314,6 +331,11 @@ p {
 
 .Page-figure {
   margin-bottom: 25px;
+}
+@media screen and (max-width: 1300px) {
+  .Page-figure > img {
+    width: 60%;
+  }
 }
 @media screen and (max-width: 991px) {
   .Page-figure {
@@ -443,7 +465,7 @@ p {
 .Page-textDecorate::before, .Page-textDecorate::after {
   background-position: center 0;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   content: "";
   display: block;
   height: 60px;
@@ -498,9 +520,18 @@ p {
 
 .Page-background {
   left: 0;
+  min-height: 100vh;
   position: absolute;
   top: 0;
+  width: 100%;
   z-index: 9;
+}
+.Page-background > img {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 @media screen and (max-width: 991px) {
   .Page-background {
@@ -528,6 +559,12 @@ p {
 .Page-bgContent--center {
   -webkit-align-items: center;
   align-items: center;
+}
+@media screen and (max-width: 1300px) {
+  .Page-bgContent--center {
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+  }
 }
 @media screen and (max-width: 991px) {
   .Page-bgContent {
@@ -808,14 +845,17 @@ p {
   height: 100%;
 }
 
+.Maps-wrapper {
+  min-height: 250px;
+}
+
 .Events {
   display: -webkit-flex;
   display: flex;
 }
 @media screen and (max-width: 991px) {
   .Events {
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
+    display: block;
   }
 }
 
@@ -826,17 +866,18 @@ p {
 @media screen and (max-width: 991px) {
   .Events-video {
     margin-bottom: 50px;
+    margin-right: 0;
+    padding: 0;
+    width: 100%;
   }
 }
 
 .Events-content {
   margin-left: 15px;
 }
-
 @media screen and (max-width: 991px) {
-  .Events-video, .Events-content {
-    -webkit-flex: 0 1 100%;
-    flex: 0 1 100%;
+  .Events-content {
+    margin-left: 0;
   }
 }
 
@@ -937,6 +978,12 @@ p {
   background-color: transparent;
   color: white;
   padding-right: 0;
+}
+.Slidebar .MainMenu li a:hover, .Slidebar .MainMenu li a:focus {
+  color: #b68e0d;
+}
+.Slidebar .MainMenu li.active a, .Slidebar .MainMenu li.current-menu-item a, .Slidebar .MainMenu li.current-menu-parent a {
+  color: #b68e0d;
 }
 .Slidebar .MainMenu li:first-child a {
   padding-left: 0;

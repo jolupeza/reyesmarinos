@@ -46,8 +46,12 @@
       height: 49px;
       padding-right: 30px;
       text-decoration: none;
+      &:hover, &:focus {
+        color: $yellow;
+        text-decoration: underline;
+      }
     }
-    &.active, &.current-menu-item, &.current-menu-parent {
+    &.active, &.current-menu-item, &.current-menu-parent{
       a {
         color: $yellow;
         text-decoration: underline;

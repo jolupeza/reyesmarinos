@@ -21,23 +21,22 @@
     <div class="carousel-inner" role="listbox">
       <?php while ($the_query->have_posts()) : ?>
         <?php $the_query->the_post(); ?>
+        <?php
+          $values = get_post_custom(get_the_id());
+          $responsive = isset($values['mb_responsive']) ? esc_attr($values['mb_responsive'][0]) : '';
+        ?>
         <?php if (has_post_thumbnail()) : ?>
           <div class="item<?php echo ($i === 0) ? ' active' : ''; ?>">
             <picture>
-              <!-- <source class="img-responsive center-block" media="(max-width: 767px) and (orientation: portrait)" srcset="./images/slide-home-responsive.jpg" alt="" /> -->
+              <?php if (!empty($responsive)) : ?>
+                <source class="img-responsive center-block" media="(max-width: 991px) and (orientation: portrait)" srcset="<?php echo $responsive; ?>" alt="" />
+              <?php endif; ?>
               <?php the_post_thumbnail('full', [
                   'class' => 'img-responsive center-block',
                   'alt' => get_the_title()
                 ]);
               ?>
             </picture>
-            <!-- <div class="carousel-caption carousel-caption--left">
-              <h2 class="text-uppercase">Vigila</h2>
-              <p>expertos en soluciones de seguridad electrónica para empresas.</p>
-              <div class="carousel-buttons text-uppercase">
-                <a class="Button Button--white Button--medium Button--transparent Button--border Button--borderWhite" href="">Solicita aquí</a>
-              </div>
-            </div> -->
           </div>
         <?php endif; ?>
         <?php $i++; ?>

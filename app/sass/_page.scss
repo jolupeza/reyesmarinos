@@ -1,6 +1,4 @@
 .Page {
-  background-color: $text-color;
-  min-height: 100vh;
   padding: 190px 0 0;
   &--eventos {
     background: transparent url('./../images/bg-eventos.png') center 0 repeat-y;
@@ -37,6 +35,11 @@
 }
 .Page-figure {
   margin-bottom: 25px;
+  @media screen and (max-width: 1300px) {
+    > img {
+      width: 60%;
+    }
+  }
   @media screen and (max-width: 991px) {
     margin-bottom: 50px;
   }
@@ -128,7 +131,7 @@
   &::before, &::after {
     background-position: center 0;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     content: "";
     display: block;
     height: 60px;
@@ -169,9 +172,18 @@
 }
 .Page-background {
   left: 0;
+  min-height: 100vh;
   position: absolute;
   top: 0;
+  width: 100%;
   z-index: 9;
+  > img {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
   @media screen and (max-width: 991px) {
     width: 100%;
     > img {
@@ -195,6 +207,9 @@
   z-index: 99;
   &--center {
     @include align-items(center);
+    @media screen and (max-width: 1300px) {
+      @include align-items(flex-start);
+    }
   }
   @media screen and (max-width: 991px) {
     padding-top: 130px;

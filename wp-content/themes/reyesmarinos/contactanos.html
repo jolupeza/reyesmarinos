@@ -5,19 +5,9 @@
     <title>Reyes Marinos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- build:css css/style.min.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="./../node_modules/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="./../node_modules/animate.css/animate.css" />
-    <link rel="stylesheet" href="./libs/formvalidation/dist/css/formValidation.css" />
-    <!-- <link rel="stylesheet" href="./libs/jquery.bxslider/jquery.bxslider.css" /> -->
-    <!-- endbower -->
-    <!-- inject:css -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- endinject -->
-    <!-- endbuild -->
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
-  <body class="single">
+  <body class="page-template-page-contact">
     <header class="Header">
       <div class="container">
         <div class="row hidden-md hidden-lg">
@@ -38,10 +28,10 @@
           </h1>
           <ul class="MainMenu">
             <li><a href="index.html">Home</a></li>
-            <li class="active"><a href="eventos.html">Eventos</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
             <li><a href="nosotros.html">Nosotros</a></li>
             <li><a href="videos.html">Videos</a></li>
-            <li><a href="contactanos.html">Contáctanos</a></li>
+            <li class="active"><a href="contactanos.html">Contáctanos</a></li>
           </ul>
         </nav>
         <aside class="Header-toggle visible-xs-block visible-sm-block js-toggle-slidebar">
@@ -67,21 +57,65 @@
       </article>
     </section>
 
-    <section class="Page">
+    <section class="Page Page--contactanos">
       <div class="container">
         <div class="row">
-          <div class="col-md-7">
-            <section id="carousel-events" class="carousel slide Carousel Carousel--eventos" data-ride="carousel">
+          <div class="col-md-6">
+            <h2 class="Title text-blue text-font-across">Cuentanos</h2>
+            <div class="text-blue">
+              <p>De tí, de lo que haces, de tu plato favorito, de los lugares que más te gustan, de lo que esperas de un restaurante o si te gustaría ser parte de nosotros.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <form action="" class="Form">
+              <div class="form-group">
+                <label for="contact_name" class="sr-only">Tu nombre completo</label>
+                <input type="text" class="form-control" name="contact_name" id="contact_name" placeholder="Tu nombre completo">
+              </div>
+              <div class="form-group">
+                <label for="contact_email" class="sr-only">Tu correo</label>
+                <input type="email" class="form-control" name="contact_email" id="contact_email" placeholder="Tu correo">
+              </div>
+              <div class="form-group">
+                <label for="contact_message" class="sr-only">Escribe tu mensaje</label>
+                <textarea class="form-control" name="contact_message" id="contact_message" placeholder="Escribe tu mensaje"></textarea>
+              </div>
+
+              <p class="Form-button">
+                <button type="submit" class="Button Button--submit">enviar</button>
+              </p>
+            </form>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <section class="Social">
+              <h3><span><strong class="text-uppercase">Síguenos </strong>en</span></h3>
+
+              <ul class="Social-list">
+                <li><a href=""><i class="icon-facebook"></i></a></li>
+                <li><a href=""><i class="icon-twitter"></i></a></li>
+                <li><a href=""><i class="icon-instagram"></i></a></li>
+              </ul>
+            </section>
+          </div>
+          <div class="col-md-6">&nbsp;</div>
+        </div>
+
+        <section class="Maps">
+          <article class="Maps-carousel">
+            <section id="carousel-maps" class="carousel slide Carousel Carousel--contact" data-ride="carousel">
               <!-- <ol class="carousel-indicators">
-                <li data-target="#carousel-events" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-events" data-slide-to="1"></li>
+                <li data-target="#carousel-maps" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-maps" data-slide-to="1"></li>
               </ol> -->
 
               <div class="carousel-inner" role="listbox">
                 <div class="item active">
                   <picture>
                     <!-- <source class="img-responsive center-block" media="(max-width: 767px) and (orientation: portrait)" srcset="./images/slide-home-responsive.jpg" alt="" /> -->
-                    <img class="img-responsive center-block" src="./images/evento.jpg" alt="Evento" />
+                    <img class="img-responsive center-block" src="./images/slide-contact-01.png" alt="Slide Contact 01" />
                   </picture>
                   <!-- <div class="carousel-caption carousel-caption--left">
                     <h2 class="text-uppercase">Vigila</h2>
@@ -93,46 +127,26 @@
                 </div>
               </div>
 
-              <a class="left carousel-control" href="#carousel-events" role="button" data-slide="prev">
+              <a class="left carousel-control" href="#carousel-maps" role="button" data-slide="prev">
                 <i class="icon-keyboard_arrow_left"></i>
               </a>
-              <a class="right carousel-control" href="#carousel-events" role="button" data-slide="next">
+              <a class="right carousel-control" href="#carousel-maps" role="button" data-slide="next">
                 <i class="icon-keyboard_arrow_right"></i>
               </a>
             </section>
-          </div>
-          <div class="col-md-5">
-            <h2 class="Page-title text-yellow">¡Gracias por visitarnos en el Mistura 2017!</h2>
-            <p>Compartimos con todos ustedes las fotos de Reyes Marinos en el Mistura 2017. Les agradecemos su preferencia, la misma que nos llevo a formar parte de este evento reconocido en el mundo.</p>
-            <p>¡Hasta el próximo año!</p>
-          </div>
-        </div>
+          </article>
+          <article class="Maps-wrapper">
+            <figure class="Maps-map">
 
-        <div class="Page-marginTop">
-          <p class="text-center">
-            <a href="" class="Nav"><i class="Nav-left"></i></a>
-            <a href="eventos-blog.html" class="Button Button--border Button--borderWhite">VER todos los EVENTOS</a>
-            <a href="" class="Nav"><i class="Nav-right"></i></a>
-          </p>
-        </div>
+            </figure>
+          </article>
+        </section>
       </div>
     </section>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-    <!-- build:js js/vendor.min.js -->
-    <!-- bower:js -->
-    <script src="./../node_modules/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="./libs/formvalidation/dist/js/formValidation.js"></script>
-    <script src="./libs/formvalidation/dist/js/framework/bootstrap.js"></script>
-    <script src="./libs/formvalidation/dist/js/language/es_ES.js"></script>
-    <script src="./../node_modules/jquery.easing/jquery.easing.js"></script>
-    <!--<script src="./libs/jquery.bxslider/jquery.bxslider.js"></script>-->
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:js js/app.min.js -->
-    <!-- inject:js -->
-    <!-- endinject -->
-    <!-- endbuild -->
+    <script src="js/vendor.min.js"></script>
+    
   </body>
 </html>

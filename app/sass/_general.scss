@@ -1,17 +1,29 @@
+html, body {
+  height: 100%;
+}
 body {
   color: white;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   font-weight: 300;
   &.category, &.single {
+    background-color: $text-color;
+    background-image: url('./../images/bg-eventos.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     @media screen and (max-width: 991px) {
       background: transparent url('./../images/bg-body.jpg') 0 0 repeat;
     }
   }
   &.page-template-page-contact {
-    @media screen and (max-width: 991px) {
-      background-color: $skyBlue;
-    }
+    background-color: $skyBlue;
+    background-image: url('./../images/bg-contactanos.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
   }
 }
 a {

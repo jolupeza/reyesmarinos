@@ -12,10 +12,10 @@
         <?php if (!empty($background)) : ?>
           <img src="<?php echo $background; ?>" alt="Nosotros" class="img-responsive center-block" />
         <?php endif; ?>
-        <section class="Page-bgContent">
+        <section class="Page-bgContent Page-bgContent--center">
           <div class="container">
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-sm-6 col-md-5 col-lg-6">
                 <?php if (has_post_thumbnail()) : ?>
                   <figure class="Page-figure">
                     <?php the_post_thumbnail('full', [
@@ -26,7 +26,7 @@
                   </figure>
                 <?php endif; ?>
               </div>
-              <div class="col-md-6">
+              <div class="col-sm-6 col-md-7 col-lg-6">
                 <article class="Page-textDecorate">
                   <?php the_content(); ?>
                 </article>

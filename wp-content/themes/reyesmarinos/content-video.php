@@ -10,13 +10,25 @@
     $video = isset($values['mb_video']) ? esc_attr($values['mb_video'][0]) : '';
   ?>
   <?php if (!empty($video)) : ?>
-    <figure class="Page-video Events-video">
+    <figure class="Page-video Events-video text-center">
       <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
       <div id="player"></div>
 
       <script>
         // 2. This code loads the IFrame Player API code asynchronously.
         var tag = document.createElement('script');
+        var height = '360',
+            width = '640';
+
+        if (window.innerWidth < 768) {
+          height = '240';
+          width = '426';
+        }
+
+        if (window.innerWidth < 450) {
+          height = '240';
+          width = '320';
+        }
 
         tag.src = "https://www.youtube.com/iframe_api";
         var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -24,11 +36,11 @@
 
         // 3. This function creates an <iframe> (and YouTube player)
         //    after the API code downloads.
-        var player;
+        // var player;
         function onYouTubeIframeAPIReady() {
           player = new YT.Player('player', {
-            height: '360',
-            width: '640',
+            height: height,
+            width: width,
             videoId: '<?php echo $video; ?>',
             events: {
               // 'onReady': onPlayerReady,

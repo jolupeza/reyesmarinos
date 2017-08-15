@@ -1,7 +1,7 @@
 .Events {
   @include display-flex();
   @media screen and (max-width: 991px) {
-    @include flex-wrap(wrap);
+    display: block;
   }
 }
 .Events-video {
@@ -9,13 +9,14 @@
   width: 700px;
   @media screen and (max-width: 991px) {
     margin-bottom: 50px;
+    margin-right: 0;
+    padding: 0;
+    width: 100%;
   }
 }
 .Events-content {
   margin-left: 15px;
-}
-.Events-video, .Events-content {
   @media screen and (max-width: 991px) {
-    @include flex(0 1 100%);
+    margin-left: 0;
   }
 }
