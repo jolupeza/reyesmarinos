@@ -29,22 +29,26 @@
         $logo = wp_get_attachment_image_src($customLogoId, 'full');
       ?>
       <div class="container">
-        <div class="row hidden-md hidden-lg">
-          <div class="col-xs-6">
+        <?php if (!is_home()) : ?>
+          <div class="row hidden-md hidden-lg">
+            <div class="col-xs-6">
+              <h1 class="Header-logo">
+                <a href="<?php echo home_url(); ?>" title="<?php bloginfo('name'); ?>">
+                  <img src="<?php echo $logo[0]; ?>" alt="<?php bloginfo('name') ?> | <?php bloginfo('description'); ?>" class="img-responsive" />
+                </a>
+              </h1>
+            </div>
+            <div class="col-xs-6">&nbsp;</div>
+          </div>
+        <?php endif; ?>
+        <nav class="Header-menu hidden-xs hidden-sm">
+          <?php if (!is_home()) : ?>
             <h1 class="Header-logo">
               <a href="<?php echo home_url(); ?>" title="<?php bloginfo('name'); ?>">
-                <img src="<?php echo $logo[0]; ?>" alt="<?php bloginfo('name') ?> | <?php bloginfo('description'); ?>" class="img-responsive" />
+                <img src="<?php echo $logo[0]; ?>" alt="<?php bloginfo('name') ?> | <?php bloginfo('description'); ?>" class="img-responsive center-block" />
               </a>
             </h1>
-          </div>
-          <div class="col-xs-6">&nbsp;</div>
-        </div>
-        <nav class="Header-menu hidden-xs hidden-sm">
-          <h1 class="Header-logo">
-            <a href="<?php echo home_url(); ?>" title="<?php bloginfo('name'); ?>">
-              <img src="<?php echo $logo[0]; ?>" alt="<?php bloginfo('name') ?> | <?php bloginfo('description'); ?>" class="img-responsive center-block" />
-            </a>
-          </h1>
+          <?php endif; ?>
           <?php
             $args = [
               'theme_location' => 'main-menu',
