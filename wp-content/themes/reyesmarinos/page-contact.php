@@ -29,6 +29,43 @@
             <div class="text-blue">
               <?php the_content(); ?>
             </div>
+
+            <?php if ($options['display_social_link'] && !is_null($options['display_social_link'])) : ?>
+              <?php
+                $facebook = isset($options['facebook']) ? esc_attr($options['facebook']) : '';
+                $twitter = isset($options['twitter']) ? esc_attr($options['twitter']) : '';
+                $instagram = isset($options['instagram']) ? esc_attr($options['instagram']) : '';
+              ?>
+                <section class="Social hidden-xs hidden-sm">
+                  <h3><span><strong class="text-uppercase">Síguenos </strong>en</span></h3>
+
+                  <ul class="Social-list">
+                    <?php if (!empty($facebook)) : ?>
+                      <li>
+                        <a href="https://www.facebook.com/<?php echo $facebook; ?>" title="Ir a Facebook" target="_blank" rel="noopener noreferrer">
+                          <i class="icon-facebook"></i>
+                        </a>
+                      </li>
+                    <?php endif; ?>
+
+                    <?php if (!empty($twitter)) : ?>
+                      <li>
+                        <a href="https://twitter.com/<?php echo $twitter; ?>" title="Ir a Twitter" target="_blank" rel="noopener noreferrer">
+                          <i class="icon-twitter"></i>
+                        </a>
+                      </li>
+                    <?php endif; ?>
+
+                    <?php if (!empty($instagram)) : ?>
+                      <li>
+                       <a href="https://www.instagram.com/<?php echo $instagram; ?>" title="Ir a Instagram" target="_blank" rel="noopener noreferrer">
+                        <i class="icon-instagram"></i>
+                      </a>
+                      </li>
+                    <?php endif; ?>
+                  </ul>
+                </section>
+            <?php endif; ?>
           </div>
           <div class="col-md-6">
             <form action="" class="Form" method="POST" id="js-frm-contact">
@@ -55,12 +92,7 @@
         </div>
 
         <?php if ($options['display_social_link'] && !is_null($options['display_social_link'])) : ?>
-          <?php
-            $facebook = isset($options['facebook']) ? esc_attr($options['facebook']) : '';
-            $twitter = isset($options['twitter']) ? esc_attr($options['twitter']) : '';
-            $instagram = isset($options['instagram']) ? esc_attr($options['instagram']) : '';
-          ?>
-          <div class="row">
+          <div class="row hidden-md hidden-lg">
             <div class="col-md-6">
               <section class="Social">
                 <h3><span><strong class="text-uppercase">Síguenos </strong>en</span></h3>
